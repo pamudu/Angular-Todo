@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Item } from "./item";
 
 @Component({
   selector: "app-root",
@@ -33,5 +34,9 @@ export class AppComponent {
       description,
       done: false,
     });
+  }
+
+  remove(item: Item) {
+    this.allItems.splice(this.allItems.indexOf(item), 1);
   }
 }
